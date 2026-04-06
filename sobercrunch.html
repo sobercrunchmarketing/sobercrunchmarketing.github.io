@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sober Crunch — Instagram Marketing for Sober Living Homes</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2ee;
+    --cream: #ede8e0;
+    --green: #2d5a3d;
+    --green-light: #3d7a54;
+    --green-pale: #e8f0ea;
+    --amber: #c8823a;
+    --gray: #6b6b6b;
+    --gray-light: #d4cfc8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(245, 242, 238, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--green);
+  }
+
+  .logo span {
+    color: var(--amber);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--green); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .nav-cta {
+    background: var(--green) !important;
+    color: var(--white) !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--green-light) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 48px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    color: var(--black);
+    margin-bottom: 32px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green);
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--gray);
+    max-width: 480px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .hero-sub strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--white);
+    padding: 16px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-primary:hover {
+    background: var(--green-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
+  }
+
+  .btn-secondary:hover { gap: 12px; }
+
+  .hero-price {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .hero-price strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  /* HERO CARD */
+  .hero-visual {
+    position: relative;
+  }
+
+  .phone-mockup {
+    background: var(--black);
+    border-radius: 40px;
+    padding: 16px;
+    width: 280px;
+    margin: 0 auto;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .phone-screen {
+    background: var(--white);
+    border-radius: 28px;
+    overflow: hidden;
+    aspect-ratio: 9/19;
+    position: relative;
+  }
+
+  .phone-header {
+    background: var(--green);
+    padding: 20px 16px 14px;
+    color: white;
+  }
+
+  .phone-handle {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+
+  .phone-home-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .phone-tagline {
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  .dm-bubble {
+    margin: 12px;
+    animation: slideIn 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  .dm-bubble:nth-child(1) { animation-delay: 0.5s; }
+  .dm-bubble:nth-child(2) { animation-delay: 1.2s; }
+  .dm-bubble:nth-child(3) { animation-delay: 2.0s; }
+  .dm-bubble:nth-child(4) { animation-delay: 2.8s; }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .dm-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .dm-row.received { justify-content: flex-start; }
+  .dm-row.sent { justify-content: flex-end; }
+
+  .dm-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--green-pale);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .dm-text {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .dm-row.received .dm-text {
+    background: #f0f0f0;
+    border-bottom-left-radius: 4px;
+    color: var(--black);
+  }
+
+  .dm-row.sent .dm-text {
+    background: var(--green);
+    border-bottom-right-radius: 4px;
+    color: white;
+  }
+
+  .notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--amber);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(200, 130, 58, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .card-left {
+    left: -80px;
+    top: 30%;
+    animation: floatCard 5s ease-in-out infinite;
+  }
+
+  .card-right {
+    right: -70px;
+    bottom: 25%;
+    animation: floatCard 5s ease-in-out infinite 1s;
+  }
+
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .card-label {
+    font-size: 10px;
+    color: var(--gray);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-value {
+    font-weight: 700;
+    color: var(--green);
+    font-size: 16px;
+  }
+
+  .card-sub {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+
+  /* LOGOS / SOCIAL PROOF */
+  .social-proof {
+    background: var(--cream);
+    padding: 32px 48px;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .social-proof-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .social-proof-label {
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .proof-items {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--black);
+    opacity: 0.5;
+  }
+
+  /* HOW IT WORKS */
+  .section {
+    padding: 100px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 560px;
+    font-weight: 300;
+    margin-bottom: 64px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .step {
+    position: relative;
+    padding-top: 24px;
+    border-top: 2px solid var(--green);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .step.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .step:nth-child(2) { transition-delay: 0.1s; }
+  .step:nth-child(3) { transition-delay: 0.2s; }
+
+  .step-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    color: var(--green);
+    opacity: 0.35;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    color: var(--black);
+  }
+
+  .step p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* THREE TRACKS */
+  .tracks-section {
+    background: var(--black);
+    padding: 60px 48px;
+    color: var(--white);
+  }
+
+  .tracks-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tracks-section .section-title { color: var(--white); }
+  .tracks-section .section-eyebrow { color: var(--amber); }
+  .tracks-section .section-sub { color: rgba(245, 242, 238, 0.8); }
+
+  .tracks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 0;
+  }
+
+  .track {
+    background: #151515;
+    padding: 24px 24px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .track:hover { background: #1e1e1e; }
+
+  .track::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .track:nth-child(1)::before { background: var(--green); }
+  .track:nth-child(2)::before { background: var(--amber); }
+  .track:nth-child(3)::before { background: #7ab8d4; }
+
+  .track-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .track h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+
+  .track-desc {
+    font-size: 13px;
+    color: rgba(245, 242, 238, 0.75);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-weight: 300;
+  }
+
+  .track-hook {
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(245, 242, 238, 0.55);
+    line-height: 1.5;
+    border-left: 2px solid rgba(255,255,255,0.2);
+    padding-left: 12px;
+  }
+
+  /* WHAT YOU GET */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .feature-card {
+    background: var(--cream);
+    padding: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-light);
+    transition: all 0.2s;
+  }
+
+  .feature-card:hover {
+    border-color: var(--green);
+    transform: translateY(-2px);
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--green-pale);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* PRICING */
+  .pricing-section {
+    background: var(--green);
+    padding: 100px 48px;
+    color: var(--white);
+  }
+
+  .pricing-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pricing-section .section-eyebrow {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .pricing-section .section-title {
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .pricing-section .section-sub {
+    color: rgba(255,255,255,0.7);
+    margin: 0 auto 48px;
+  }
+
+  .price-display {
+    margin-bottom: 48px;
+  }
+
+  .price-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: -2px;
+  }
+
+  .price-period {
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .price-note {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+  }
+
+  .price-includes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .price-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .price-line::before {
+    content: '✓';
+    color: var(--amber);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .btn-white {
+    background: var(--white);
+    color: var(--green);
+    padding: 18px 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-white:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+  }
+
+  .founding-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* TESTIMONIAL */
+  .testimonial-section {
+    padding: 100px 48px;
+    background: var(--cream);
+  }
+
+  .testimonial-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  blockquote {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--black);
+    font-style: italic;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  blockquote::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: var(--green-pale);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    line-height: 1;
+    z-index: 0;
+  }
+
+  blockquote span { position: relative; z-index: 1; }
+
+  .quote-attribution {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 100px 48px;
+    max-width: 100%;
+    background: #111;
+  }
+
+  .faq-section .section-eyebrow { color: var(--amber); }
+
+  .faq-section h2 { color: var(--white); }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-q {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+  }
+
+  .faq-a {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  /* FOOTER CTA */
+  .footer-cta {
+    padding: 100px 48px;
+    text-align: center;
+    border-top: 1px solid var(--gray-light);
+  }
+
+  .footer-cta .section-title {
+    margin-bottom: 20px;
+  }
+
+  .footer-cta .section-sub {
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  footer {
+    background: var(--black);
+    padding: 40px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .logo { color: rgba(255,255,255,0.4); }
+  footer .logo span { color: rgba(200, 130, 58, 0.4); }
+
+  .footer-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* PRICING ANIMATIONS */
+
+  .float-badge {
+    display: inline-block;
+    margin-top: 16px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 24px;
+    white-space: nowrap;
+    animation: floatBadge 3s ease-in-out infinite;
+  }
+
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition-delay: calc(var(--i) * 0.12s);
+  }
+
+  .slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .price-line::before {
+    content: '✓';
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+    display: inline-block;
+    animation: checkPulse 1.8s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.3s);
+  }
+
+  @keyframes checkPulse {
+    0%, 100% { opacity: 1; transform: scale(1); color: #c8823a; }
+    50% { opacity: 0.4; transform: scale(1.4); color: #ffffff; }
+  }
+
+  /* SLAM IN ANIMATION */
+  .slam-in {
+    opacity: 0;
+    transform: translateX(120px);
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .slam-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { gap: 20px; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 120px 24px 60px;
+      gap: 48px;
+    }
+
+    .phone-mockup { width: 220px; }
+    .card-left, .card-right { display: none; }
+
+    .steps { grid-template-columns: 1fr; }
+    .tracks { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+
+    .section { padding: 60px 24px; }
+    .tracks-section { padding: 60px 24px; }
+    .pricing-section { padding: 60px 24px; }
+
+    blockquote { font-size: 20px; }
+    .price-amount { font-size: 72px; }
+
+    /* Fix what's included rows on mobile */
+    div[style*="min-height: 140px"] {
+      flex-direction: column !important;
+    }
+    div[style*="width: 80px"] {
+      width: 100% !important;
+      height: 8px !important;
+      writing-mode: horizontal-tb !important;
+    }
+    div[style*="width: 80px"] span {
+      display: none !important;
+    }
+    div[style*="padding: 32px 48px"] {
+      padding: 24px !important;
+    }
+
+    /* Fix three mechanism columns on mobile */
+    div[style*="display: flex; align-items: center; gap: 0; flex-wrap: wrap"] > div {
+      border-right: none !important;
+      border-bottom: 1px solid var(--gray-light);
+      padding: 20px 0 !important;
+    }
+
+    /* Fix demand creation grid on mobile */
+    div[style*="grid-template-columns: repeat(2, 1fr); gap: 48px"] {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+
+    /* Ensure nothing bleeds outside viewport */
+    section, div {
+      max-width: 100vw;
+    }
+
+    .float-badge {
+      font-size: 11px;
+      padding: 6px 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Sober<span>Crunch</span></div>
+  <div class="nav-links">
+    <a href="https://buy.stripe.com/aFa7sK6Zy07xfTO1HVcMM00" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background: var(--white);">
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Instagram Marketing for Sober Living Homes</p>
+      <h1>Your beds<br>filled by <em>people<br>who need you.</em></h1>
+      <p class="hero-sub">
+        Most sober living homes are <strong>invisible online.</strong> We fix that — with weekly scripts, automated client capture, and a complete House Profile that goes directly to anyone who's interested. <strong>Everything built before you film a single video.</strong>
+      </p>
+      <div class="cta-group">
+        <a href="https://buy.stripe.com/aFa7sK6Zy07xfTO1HVcMM00" class="btn-primary">Get Started Today</a>
+        <a href="#how-it-works" class="btn-secondary">See how it works →</a>
+      </div>
+      <p class="hero-price">Month to month. No contract. <strong>One resident paying rent covers your first 3 months.</strong></p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="notification-badge">3 new clients</div>
+        <div class="phone-screen">
+          <div class="phone-header">
+            <div class="phone-handle">@recoveryridgela</div>
+            <div class="phone-home-name">Recovery Ridge</div>
+            <div class="phone-tagline">Highland Park, LA · $950/mo · Men's</div>
+          </div>
+
+          <div class="dm-bubble">
+            <div class="dm-row received">
+              <div class="dm-avatar">👤</div>
+              <div class="dm-text">HOME</div>
+            </div>
+          </div>
+
+          <div class="dm-bubble">
+            <div class="dm-row sent">
+              <div class="dm-text">Hey! Here's everything about Recovery Ridge 🏡 [link] — are you looking for yourself or someone you love?</div>
+            </div>
+          </div>
+
+          <div class="dm-bubble">
+            <div class="dm-row received">
+              <div class="dm-avatar">👤</div>
+              <div class="dm-text">For myself. Getting out of treatment next week</div>
+            </div>
+          </div>
+
+          <div class="dm-bubble">
+            <div class="dm-row sent">
+              <div class="dm-text">Perfect timing. Let's talk — we have a bed open right now 🙌</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-card card-left">
+        <div class="card-label">This week</div>
+        <div class="card-value">7 clients</div>
+        <div class="card-sub">from 3 posts</div>
+      </div>
+
+      <div class="floating-card card-right">
+        <div class="card-label">Automation</div>
+        <div class="card-value">24/7</div>
+        <div class="card-sub">HOME trigger live</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE MECHANISM LINES -->
+  <div style="border-top: 1px solid var(--gray-light); background: var(--cream);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 48px 48px 0;">
+      <p style="font-family: 'Bebas Neue', sans-serif; font-size: 56px; color: var(--black); letter-spacing: 1px; margin-bottom: 40px;">We know marketing.</p>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 48px 48px; display: flex; align-items: center; gap: 0; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px; padding: 24px 40px 24px 0; border-right: 1px solid var(--gray-light);">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 10px;">What we do</span>
+        <p style="font-size: 16px; font-weight: 500; color: var(--black); line-height: 1.6;">We tell you exactly what to post — and how to post it so the right people see it.</p>
+      </div>
+      <div style="flex: 1; min-width: 280px; padding: 24px 40px; border-right: 1px solid var(--gray-light);">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 10px;">How it works</span>
+        <p style="font-size: 16px; font-weight: 500; color: var(--black); line-height: 1.6;">We train the algorithm to reach people in recovery, their families, and the case managers who refer residents.</p>
+      </div>
+      <div style="flex: 1; min-width: 280px; padding: 24px 0 24px 40px;">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); display: block; margin-bottom: 10px;">The outcome</span>
+        <p style="font-size: 16px; font-weight: 500; color: var(--black); line-height: 1.6;">Beds fill. And when they're full, demand keeps building — so the next vacancy fills faster than the last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div style="padding: 0 48px; max-width: 1200px; margin: 0 auto;">
+  <p style="font-size: 13px; color: #555; font-weight: 400; padding: 24px 0; border-top: 1px solid var(--gray-light);">Built for all types of sober living — men's homes, women's homes, co-ed homes, Oxford Houses, recovery apartments, and multi-property operators.</p>
+</div>
+
+<!-- MANIFESTO -->
+<section style="background: var(--black); padding: 100px 48px;">
+  <div style="max-width: 720px; margin: 0 auto;">
+    <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 32px;" class="fade-up">The honest truth</p>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 64px); line-height: 1; color: var(--white); letter-spacing: 1px; margin-bottom: 40px;" class="fade-up">Most sober living<br>marketing is broken.</h2>
+    <div class="fade-up" style="border-left: 3px solid var(--green); padding-left: 32px; margin-bottom: 48px;">
+      <p style="font-size: 18px; color: rgba(245,242,238,0.75); line-height: 1.8; font-weight: 300; margin-bottom: 24px;">It's either invisible or filled with the same tired motivational quotes, sunset photos, and fake "success stories" nobody believes anymore.</p>
+      <p style="font-size: 18px; color: rgba(245,242,238,0.75); line-height: 1.8; font-weight: 300; margin-bottom: 24px;">Prospects don't want inspiration. They want real answers — what do the rooms actually look like? Where is the house? How much does it cost? What's daily life really like?</p>
+      <p style="font-size: 18px; color: rgba(245,242,238,0.75); line-height: 1.8; font-weight: 300;">Most homes hide or dodge these questions. <span style="color: white; font-weight: 600;">We don't.</span></p>
+    </div>
+    <div class="fade-up" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 48px;">
+      <p style="font-size: 18px; color: rgba(245,242,238,0.75); line-height: 1.8; font-weight: 300; margin-bottom: 24px;">At Sober Crunch, we create honest, practical Instagram content that shows the real story of your sober living. No fluff. No exploitation.</p>
+      <p style="font-size: 18px; color: rgba(245,242,238,0.75); line-height: 1.8; font-weight: 300; margin-bottom: 24px;">We handle everything and send you one idiot-proof email each week with ready-to-post content along with custom resources your new clients need.</p>
+      <p style="font-size: 22px; color: white; font-weight: 600; line-height: 1.6;">We don't just help you post.<br>We help you fill your beds.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="section" style="background: var(--white);">
+  <p class="section-eyebrow fade-up">The system</p>
+  <h2 class="section-title fade-up" style="color: var(--black);">We tell you exactly what<br>to post. Then we make<br>sure the right people see it.</h2>
+  <p class="section-sub fade-up"><strong style="color: var(--green); font-weight: 700;">PLUS</strong> we automate your client capture.</p>
+
+  <div class="steps">
+    <div class="step fade-up">
+      <div class="step-number">01</div>
+      <h3>You tell us about your home</h3>
+      <p>Fill out a simple form — takes about 5 minutes. Your home's details, your rules, your vibe. That's everything we need to build content that sounds like you and attracts the right residents.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-number">02</div>
+      <h3>We build your content and train the algorithm</h3>
+      <p>We create your House Profile, write your scripts, and set up the posting instructions that tell Instagram exactly who to show your content to — people in recovery, their families, case managers in your area. The algorithm learns who you are and pushes your content to the right people automatically.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-number">03</div>
+      <h3>Beds fill. Demand keeps building.</h3>
+      <p>We connect your Instagram to an automated platform that watches for a specific trigger word in your comments. When someone comments on your post they get your full House Profile instantly. You get notified. You take the conversation from there. And when your beds are full — the content doesn't stop. It builds a waitlist, grows your case manager relationships, and makes your home the obvious choice in your market permanently.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THREE TRACKS -->
+<section class="tracks-section">
+  <div class="tracks-inner">
+    <p class="section-eyebrow">Who we reach for you</p>
+    <h2 class="section-title" style="color: var(--white); margin-bottom: 16px;">Every post speaks to<br>three audiences at once.</h2>
+    <p class="section-sub" style="color: rgba(245,242,238,0.55); margin-bottom: 56px;">Most sober living homes post generic content that reaches nobody. We write specifically for the three people who fill your beds — and rotate between them every single week.</p>
+
+    <div class="tracks">
+      <div class="track">
+        <div class="track-icon">🙋</div>
+        <h3>People in Recovery</h3>
+        <p class="track-desc">Someone who just left treatment and needs somewhere real to land. Scared, searching, ready to move if the place feels right.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon">👨‍👩‍👦</div>
+        <h3>Family Members</h3>
+        <p class="track-desc">A parent or sibling searching for a safe place for someone they love. Emotional, urgent, and sharing everything they find.</p>
+      </div>
+      <div class="track">
+        <div class="track-icon">🏥</div>
+        <h3>Case Managers</h3>
+        <p class="track-desc">A counselor or discharge planner who refers residents repeatedly. One relationship here fills beds for months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="section fade-up" style="background: #1a1a1a;">
+  <p class="section-eyebrow">What's included</p>
+  <h2 class="section-title" style="color: var(--white);">Everything. Done for you.<br>Every single week.</h2>
+  <p class="section-sub" style="color: rgba(255,255,255,0.65); margin-bottom: 32px;">You run your home. We make sure people see it.</p>
+</section>
+
+<div style="max-width: 100%; overflow: hidden;">
+
+  <!-- Item 1 -->
+  <div class="slam-in" style="display: flex; align-items: stretch; min-height: 140px; background: #1a1a1a;">
+    <div style="width: 80px; background: var(--green); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; letter-spacing: 4px;">01</span>
+    </div>
+    <div style="flex: 1; padding: 32px 48px; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 48px;">
+      <div style="flex: 1;">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px;">House Profile</p>
+        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; color: var(--white);">Your home — delivered automatically to anyone who asks.</h3>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300; max-width: 560px;">A professional document about your specific home — price, layout, rules, amenities, vibe, how to apply. The moment someone comments HOME on any post you ever make, it lands in their DMs instantly. 24/7. Without you doing a thing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="slam-in" style="display: flex; align-items: stretch; min-height: 140px; background: var(--cream);">
+    <div style="width: 80px; background: #1e3d2a; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; letter-spacing: 4px;">02</span>
+    </div>
+    <div style="flex: 1; padding: 32px 48px; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 48px;">
+      <div style="flex: 1;">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px;">Weekly Content</p>
+        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; color: var(--black);">4 reels every Monday. Pick 3 or post them all.</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; max-width: 560px;">One targeting people in recovery, one for families, one for case managers, and one Spotlight Post zooming in on something specific about your home. Plus a static post and a weekend post — no filming required for those. Everything written specifically for your home's personality and what makes it worth choosing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="slam-in" style="display: flex; align-items: stretch; min-height: 140px; background: #1a1a1a;">
+    <div style="width: 80px; background: var(--green); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; letter-spacing: 4px;">03</span>
+    </div>
+    <div style="flex: 1; padding: 32px 48px; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 48px;">
+      <div style="flex: 1;">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px;">Algorithm Targeting</p>
+        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; color: var(--white);">We train Instagram to show your content to the right people.</h3>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300; max-width: 560px;">Every script comes with exact posting instructions — what to tag, where to film, what to do after posting. We tell Instagram who you are so it distributes your content to people in recovery, their families, and the case managers who refer residents. Not random people. The right ones.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="slam-in" style="display: flex; align-items: stretch; min-height: 140px; background: var(--cream);">
+    <div style="width: 80px; background: #1e3d2a; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; letter-spacing: 4px;">04</span>
+    </div>
+    <div style="flex: 1; padding: 32px 48px; display: flex; align-items: center; gap: 48px;">
+      <div style="flex: 1;">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px;">Monthly Lead Magnets</p>
+        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; color: var(--black);">They stack. They compound. They never stop working.</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; max-width: 560px;">Every month a new resource gets added with its own trigger word — packing guides, family evaluation guides, referral partner overviews. Each one fires on every post you've ever made. By Month 6 you have 6 different ways to capture a client from a single post — including ones you made a year ago.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- THE CONTENT -->
+<section style="background: var(--black); padding: 56px 48px;">
+  <div style="max-width: 720px; margin: 0 auto;">
+
+    <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 20px;" class="fade-up">The Content</p>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 64px); line-height: 1; color: var(--white); letter-spacing: 1px; margin-bottom: 20px;" class="fade-up">Why our content<br>actually works.</h2>
+    <p style="font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.7; font-weight: 300; margin-bottom: 56px;" class="fade-up">The creator of Sober Crunch spent 10 years in the social media and influencer marketing world. Every piece of content we write is engineered to do four specific things.</p>
+
+    <!-- FOUR POINTS STACKED -->
+    <div class="content-point fade-up" style="display: flex; align-items: flex-start; gap: 28px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); line-height: 1; flex-shrink: 0;">01</span>
+      <div>
+        <p style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 8px;">Stop the scroll</p>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300;">The first second of every reel is designed to make the exact right person freeze. Not everyone. The right one.</p>
+      </div>
+    </div>
+
+    <div class="content-point fade-up" style="display: flex; align-items: flex-start; gap: 28px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); line-height: 1; flex-shrink: 0;">02</span>
+      <div>
+        <p style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 8px;">Build trust</p>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300;">We write content that feels human, specific, and real. No inspirational quotes. No stock photos. Just honest content about what makes your home worth choosing.</p>
+      </div>
+    </div>
+
+    <div class="content-point fade-up" style="display: flex; align-items: flex-start; gap: 28px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); line-height: 1; flex-shrink: 0;">03</span>
+      <div>
+        <p style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 8px;">Grow your audience</p>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300;">Every post is designed to make someone follow, save, or share. That's how the algorithm compounds your reach week over week without spending a dollar on ads.</p>
+      </div>
+    </div>
+
+    <div class="content-point fade-up" style="display: flex; align-items: flex-start; gap: 28px;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); line-height: 1; flex-shrink: 0;">04</span>
+      <div>
+        <p style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 8px;">Drive action</p>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300;">Whether that's commenting the trigger word, sending a DM, or saving for later — every piece of content has one clear job and it's built to do it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DEMAND CREATION -->
+<section style="background: var(--black); padding: 100px 48px;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <p style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 24px;" class="fade-up">Beyond filling beds</p>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 6vw, 80px); line-height: 1; color: var(--white); letter-spacing: 1px; margin-bottom: 40px;" class="fade-up">Full beds are<br>the start.<br><span style="color: var(--green);">Not the finish line.</span></h2>
+    <p style="font-size: 19px; color: rgba(245,242,238,0.65); line-height: 1.8; font-weight: 300; margin-bottom: 48px;" class="fade-up">When your beds fill, the content keeps working. Every post builds your audience. Every follower is a future resident. Every case manager who sees your content is a referral relationship in the making. We're not just filling beds — we're building the demand that keeps you full.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;" class="fade-up">
+      <p style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 16px;">And every month it gets more powerful.</p>
+      <p style="font-size: 17px; color: rgba(245,242,238,0.65); line-height: 1.8; font-weight: 300;">A new lead magnet gets added every month — each one with its own trigger word, each one firing on every post you've ever made. By Month 6 you have 6 different resources capturing clients automatically from content you posted a year ago. The longer you stay in, the stronger it gets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="testimonial-inner fade-up">
+    <blockquote>
+      <span>"Before this, we were relying entirely on word of mouth. Now families find us on Instagram at midnight when they're searching — and the conversation starts automatically while I'm asleep."</span>
+    </blockquote>
+    <p class="quote-attribution">House Manager, Men's Sober Living — Los Angeles</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="pricing-inner">
+    <span class="section-eyebrow">Pricing</span>
+    <h2 class="section-title">Simple pricing.<br>No surprises.</h2>
+    <p class="section-sub">One package. Everything included. Choose monthly or save two months with annual.</p>
+
+    <!-- TOGGLE -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 48px; flex-wrap: wrap;">
+      <span id="label-monthly" style="font-size: 14px; font-weight: 600; color: white;">Monthly</span>
+      <div id="billing-toggle" onclick="toggleBilling()" style="width: 52px; height: 28px; background: rgba(255,255,255,0.2); border-radius: 14px; cursor: pointer; position: relative; transition: background 0.3s; flex-shrink: 0;">
+        <div id="toggle-knob" style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: left 0.3s;"></div>
+      </div>
+      <span id="label-annual" style="font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5);">Annual</span>
+      <span style="background: var(--amber); color: white; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 12px; flex-shrink: 0;">2 months free</span>
+    </div>
+
+    <!-- MONTHLY PRICE -->
+    <div id="price-monthly" class="price-display">
+      <div class="price-amount">$170</div>
+      <span class="price-period">per month, all-inclusive</span>
+      <p class="price-note">One resident paying rent for a few days covers your entire monthly cost.</p>
+      <div class="float-badge">No contract. Cancel anytime.</div>
+    </div>
+
+    <!-- ANNUAL PRICE -->
+    <div id="price-annual" class="price-display" style="display: none;">
+      <div class="price-amount">$1,700</div>
+      <span class="price-period">per year — just $141/month</span>
+      <p class="price-note">You save $340 compared to paying monthly. Paid once, runs all year.</p>
+      <div class="float-badge" style="background: rgba(200,130,58,0.3); border-color: var(--amber); color: white;">Save $340</div>
+    </div>
+
+    <div class="price-includes" id="price-includes">
+      <div class="price-line slide-in" style="--i:0">House Profile built and automated before Week 1</div>
+      <div class="price-line slide-in" style="--i:1">4 custom reels every Monday — pick 3 to post, or post them all</div>
+      <div class="price-line slide-in" style="--i:2">Complete posting instructions with every script</div>
+      <div class="price-line slide-in" style="--i:3">New lead magnet added every month — they compound</div>
+      <div class="price-line slide-in" style="--i:4">All automation setup and managed by us</div>
+      <div class="price-line slide-in" style="--i:5">You never touch the technical side</div>
+    </div>
+
+    <a href="https://buy.stripe.com/aFa7sK6Zy07xfTO1HVcMM00" class="btn-white" id="cta-btn">Get Started Today</a>
+    <p id="cta-note" style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 20px;">Month to month. No contract. Cancel anytime.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <p class="section-eyebrow fade-up" style="max-width: 800px; margin: 0 auto 16px;">Questions</p>
+  <h2 class="section-title fade-up" style="max-width: 800px; margin: 0 auto 48px; color: var(--white);">The ones people<br>always ask.</h2>
+
+  <div class="faq-item fade-up">
+    <div class="faq-q">Do I need to know anything about Instagram? <span>+</span></div>
+    <div class="faq-a">Nothing. We set up everything on the technical side — the automation, the client capture, all of it. Your job is to film short videos following our scripts and post them. That's it.</div>
+  </div>
+
+  <div class="faq-item fade-up">
+    <div class="faq-q">What does "automated client capture" actually mean? <span>+</span></div>
+    <div class="faq-a">When someone comments the word HOME on any of your posts, they instantly receive your House Profile in their DMs — everything they need to know about your home. You get notified. You take over from there. We set it up, we test it, we manage it. You never touch it.</div>
+  </div>
+
+  <div class="faq-item fade-up">
+    <div class="faq-q">How much time does this actually take on my end? <span>+</span></div>
+    <div class="faq-a">About 5-10 minutes a day filming and posting. Every Monday morning you get an email with three scripts and everything you need. Film them selfie style throughout the week whenever you have a few minutes. That's the whole job on your end.</div>
+  </div>
+
+  <div class="faq-item fade-up">
+    <div class="faq-q">How long until I start seeing leads? <span>+</span></div>
+    <div class="faq-a">Your House Profile is live and capturing clients before you post your first video — anyone who finds your account can comment HOME immediately. Organic reach builds over the first month as Instagram learns who you are. By Month 2 the compounding effect starts to kick in.</div>
+  </div>
+
+  <div class="faq-item fade-up">
+    <div class="faq-q">What if I already have referrals from treatment centers? <span>+</span></div>
+    <div class="faq-a">Those relationships are gold — this doesn't replace them. It adds a layer that works 24/7 even when your referral partners are off the clock. Families search Instagram at midnight when they're scared. This reaches people no referral network ever gets to.</div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta fade-up">
+  <p class="section-eyebrow" style="display: block; margin-bottom: 16px;">Ready to start?</p>
+  <h2 class="section-title">Your beds don't fill<br>while you're waiting.</h2>
+  <p class="section-sub" style="margin: 0 auto 48px; text-align: center;">Every week you wait is another week someone in your area builds this visibility before you do. Get started today — you'll be live within 48 hours.</p>
+  <a href="#pricing" class="btn-primary" style="font-size: 16px; padding: 18px 48px;">Get Started Today</a>
+  <p style="font-size: 13px; color: var(--gray); margin-top: 16px;">Month to month. No contract. Cancel anytime.</p>
+</section>
+
+<footer>
+  <div class="logo">Sober<span>Crunch</span></div>
+  <span class="footer-note">© 2026 Sober Crunch. All rights reserved.</span>
+</footer>
+
+<script>
+  // Counter animation
+  const counters = document.querySelectorAll('.counter');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = parseInt(entry.target.dataset.target);
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            entry.target.textContent = target.toLocaleString() + '+';
+            clearInterval(timer);
+          } else {
+            entry.target.textContent = Math.floor(current).toLocaleString();
+          }
+        }, 25);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObserver.observe(c));
+
+  // Billing toggle
+  let isAnnual = false;
+  function toggleBilling() {
+    isAnnual = !isAnnual;
+    const knob = document.getElementById('toggle-knob');
+    const monthly = document.getElementById('price-monthly');
+    const annual = document.getElementById('price-annual');
+    const labelMonthly = document.getElementById('label-monthly');
+    const labelAnnual = document.getElementById('label-annual');
+    const ctaNote = document.getElementById('cta-note');
+
+    if (isAnnual) {
+      knob.style.left = '27px';
+      monthly.style.display = 'none';
+      annual.style.display = 'block';
+      labelMonthly.style.color = 'rgba(255,255,255,0.5)';
+      labelAnnual.style.color = 'white';
+      ctaNote.textContent = 'Billed annually. Includes 2 months free.';
+      document.getElementById('cta-btn').href = 'https://buy.stripe.com/7sYaEW97Gf2r5fa3Q3cMM01';
+    } else {
+      knob.style.left = '3px';
+      monthly.style.display = 'block';
+      annual.style.display = 'none';
+      labelMonthly.style.color = 'white';
+      labelAnnual.style.color = 'rgba(255,255,255,0.5)';
+      ctaNote.textContent = 'Month to month. No contract. Cancel anytime.';
+      document.getElementById('cta-btn').href = 'https://buy.stripe.com/aFa7sK6Zy07xfTO1HVcMM00';
+    }
+  }
+
+  // Slide-in price lines
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.slide-in').forEach(el => {
+          el.classList.add('visible');
+        });
+      }
+    });
+  }, { threshold: 0.95 });
+
+  const priceIncludes = document.getElementById('price-includes');
+  if (priceIncludes) slideObserver.observe(priceIncludes);
+
+  // Slam-in — fires when element reaches upper 30% of screen
+  function checkSlamIn() {
+    document.querySelectorAll('.slam-in:not(.visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const triggerPoint = window.innerHeight * 0.50;
+      if (rect.top < triggerPoint) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkSlamIn, { passive: true });
+  checkSlamIn();
+
+  // Intersection observer for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -250px 0px' });
+
+  document.querySelectorAll('.fade-up, .step').forEach(el => observer.observe(el));
+
+  // Simple FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const answer = item.querySelector('.faq-a');
+      const isOpen = answer.style.display === 'block';
+      document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '+');
+      if (!isOpen) {
+        answer.style.display = 'block';
+        q.querySelector('span').textContent = '−';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
